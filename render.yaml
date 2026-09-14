@@ -1,0 +1,21 @@
+# NetherPanel Docs — static site blueprint (Render)
+#
+# Deploy options:
+#   1. Dashboard (recommended, no blueprint needed):
+#      Render → New → Static Site → connect this repo →
+#        Name: netherpanel-docs
+#        Root directory:    .
+#        Build command:     (leave empty)
+#        Publish directory: .   (or leave empty — static defaults to root)
+#      → Create. The site is live on https://netherpanel-docs.onrender.com
+#
+#   2. Blueprint (Infra as Code) — note: Render requires the Render GitHub App
+#      to be installed with access, or this file to be in a repo the app owns.
+#      "New +" → Blueprint → pick this repo.
+services:
+  - type: static.site
+    name: netherpanel-docs
+    runtime: static
+    rootDir: .
+    buildCommand: ""
+    publishPath: .
